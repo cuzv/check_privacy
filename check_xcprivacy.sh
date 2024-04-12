@@ -5,9 +5,9 @@ set -u
 result_file="./Result.txt"
 echo "" > $result_file
 
-scr_root=${1}
+src_root=${1}
 
-if [ ! -d "$scr_root" ]; then
+if [ ! -d "$src_root" ]; then
   echo "错误：源码目录不存在。"
   exit 1
 fi
@@ -21,7 +21,7 @@ while IFS= read -r search_string; do
     # 检查搜索字符串是否为空或只包含空格
     if [ -n "$(echo "$search_string" | tr -d '[:space:]')" ]; then
       # 指定要搜索的目录为当前目录
-      search_directory="$scr_root"
+      search_directory="$src_root"
 
       # 对搜索字符串进行处理，确保空格被保留
       # 使用 printf 格式化字符串，%s 表示字符串
