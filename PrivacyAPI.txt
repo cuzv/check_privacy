@@ -1,9 +1,15 @@
 ----1.File timestamp APIs----
+
 NSFileCreationDate
+creationDate
 NSFileModificationDate
+modificationDate
 fileModificationDate
 NSURLContentModificationDateKey
+contentModificationDateKey
 NSURLCreationDateKey
+creationDateKey
+
 getattrlist
 getattrlistbulk
 fgetattrlist
@@ -26,22 +32,32 @@ st_rdev
 st_size
 st_uid
 
+stat(
 fstat
 fstatat
 lstat
 getattrlistat
 
 ----2.System boot time APIs----
+
 systemUptime
 mach_absolute_time
 
 ----3.Disk space APIs----
+
 NSURLVolumeAvailableCapacityKey
+volumeAvailableCapacityKey
 NSURLVolumeAvailableCapacityForImportantUsageKey
+volumeAvailableCapacityForImportantUsageKey
 NSURLVolumeAvailableCapacityForOpportunisticUsageKey
+volumeAvailableCapacityForOpportunisticUsageKey
 NSURLVolumeTotalCapacityKey
+volumeTotalCapacityKey
 NSFileSystemFreeSize
+systemFreeSize
 NSFileSystemSize
+systemSize
+
 statfs
 statvfs
 fstatfs
@@ -51,7 +67,10 @@ fgetattrlist
 getattrlistat
 
 ----4.Active keyboard APIs----
+
 activeInputModes
 
 ----5.User defaults APIs----
+
 NSUserDefaults
+UserDefaults
