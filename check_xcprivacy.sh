@@ -16,7 +16,7 @@ fi
 while IFS= read -r search_string; do
   # 检查搜索字符串是否以 "----" 开头
   if [[ "$search_string" == ----* ]]; then
-    echo "${search_string}" | tee -a $result_file
+    echo "\n✅ ${search_string}\n" | tee -a $result_file
   else
     # 检查搜索字符串是否为空或只包含空格
     if [ -n "$(echo "$search_string" | tr -d '[:space:]')" ]; then
@@ -33,9 +33,10 @@ while IFS= read -r search_string; do
       result=$(find "$search_directory" -type f -exec grep -H "$formatted_search_string" {} +)
         # 检查结果是否为空
         if [ -n "$result" ]; then
-          echo "找到包含${formatted_search_string}符串的文件：" | tee -a $result_file
+          echo "------------------------BGN------------------------" | tee -a $result_file
+          echo "找到包含 ${formatted_search_string} 字符串的文件：" | tee -a $result_file
           echo "$result" | tee -a $result_file
-          echo "------------------------end------------------------" | tee -a $result_file
+          echo "------------------------END------------------------\n" | tee -a $result_file
         fi
     fi
   fi
