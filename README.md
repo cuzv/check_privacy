@@ -1,8 +1,9 @@
 
 # 隐私API扫描
 
-1. cd /Users/xxx/xxx/demo_project
-2. sh /Users/xxx/xxx/check_xcprivacy.sh
-3. 请输入必要理由api的文件路径：/Users/xxx/xxx/PrivacyAPI.txt
-   
-根据API使用情况自行添加添加xcprivacy
+```shell
+git clone https://github.com/cuzv/check_privacy
+cd check_privacy
+./check_xcprivacy.sh <src_dir>
+```
+检测结果会同时输出到终端和当前目录下的 Result.txt 文件。
